@@ -1,4 +1,4 @@
-##project1 Chnnging background color using javascript
+##project1 Changing background color using javascript
 ``` javascript
 <!DOCTYPE html>
 <html lang="en">
