@@ -279,7 +279,8 @@
 
 ```
 ##Project 4 || Nature PortFolio  - used onclick event when we click on mountain button mountain images appear and when onclicking on greenary greenary images will appear
-``` javascript<!DOCTYPE html>
+``` javascript
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
