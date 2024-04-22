@@ -453,3 +453,110 @@ for (let i = 0; i < allButtons.length; i++) {
 </body>
 </html>
 ```
+
+##Project 5 || Number Guessing Game by using javascript
+
+``` javascript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays | javascript</title>
+    <style>
+        body{
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,108,9,1) 35%, rgba(0,212,255,1) 100%);
+        }
+        h1{
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-align: center;
+        }
+        .correct{
+            background-color: rgb(79, 54, 79);
+            color: white;
+            transform: scale(1.5);
+        }
+        .incorrect{
+            background-color: red;
+            color: white;
+            transform: scale(1.5);
+        }
+        .container{
+            margin-left: 59px;
+            background-color: rgb(175, 118, 168);
+            padding: 120px;
+            border-radius: 100% 0% 100% 0% / 22% 79% 21% 78%;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        .box{
+            height: 80vh;
+            width: 100%;
+            line-height: 2.5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        input{
+            padding: 10px 30px;
+            border-radius: 10px;
+        }
+        button{
+            background-color: blue;
+            color: white;
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            padding: 10px 30px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(91, 91, 210);
+        }
+        p{
+            text-align: center;
+            font-size: 30px;
+            transition: transform 0.3s ease;
+        }
+        h2{
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>Number guessing game</h1>
+        <div class="container">
+            <h2>Enter the Number between 1 to 10</h2>
+            <input type="text" id="user-input">
+            <button onclick="check()">Check number</button>
+            <p class="para-change">Checking....</p>
+        </div>
+    </div>
+
+    <script>
+        let input1 = document.getElementById("user-input");
+        let changeContent = document.querySelector(".para-change");
+        let randomNumber = Math.floor(Math.random() * 10);
+        console.log(randomNumber);
+
+        function check() {
+            let userInput = parseInt(input1.value);
+            if (userInput === randomNumber) {
+                changeContent.textContent = "Congratulations! You guessed the correct number.";
+                changeContent.classList.add("correct")
+                changeContent.classList.remove("incorrect")
+            } else {
+                changeContent.textContent = "Sorry, try again. The correct number was " + randomNumber + ".";
+                changeContent.classList.add("incorrect")
+                changeContent.classList.remove("correct")
+            }
+        }
+    </script>
+</body>
+</html>
+```
+
