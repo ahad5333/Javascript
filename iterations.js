@@ -119,5 +119,118 @@ const number1 = myNums.filter((num)=> {
 console.log(number1)
 
 
+// filter property
+
+
+const myNums  = [1,2,3,4,5,6,7,8,9,10];
+// const number1 = myNums.filter((num)=> {
+//     return num > 4
+// })
+// console.log(number1)
+
+const books = [
+    {
+      name: "Dune",
+      author: "Frank Herbert",
+      year: 1965
+    },
+    {
+      name: "Foundation",
+      author: "Isaac Asimov",
+      year: 1951
+    },
+    {
+      name: "1984",
+      author: "George Orwell",
+      year: 1949
+    },
+    {
+      name: "Brave New World",
+      author: "Aldous Huxley",
+      year: 1932
+    },
+    {
+      name: "The Hitchhiker's Guide to the Galaxy",
+      author: "Douglas Adams",
+      year: 1979
+    },
+    {
+      name: "Neuromancer",
+      author: "William Gibson",
+      year: 1984
+    },
+    {
+      name: "Ender's Game",
+      author: "Orson Scott Card",
+      year: 1985
+    },
+    {
+      name: "The War of the Worlds",
+      author: "H.G. Wells",
+      year: 1898
+    },
+    {
+      name: "Snow Crash",
+      author: "Neal Stephenson",
+      year: 1992
+    },
+    {
+      name: "Fahrenheit 451",
+      author: "Ray Bradbury",
+      year: 1953
+    }
+  ];
+
+//   const booksfiltered = books.filter((bk)=> bk.year === "1953")
+//   console.log(booksfiltered)
+// const userBooks = books.filter((bk) => (bk.year >= 1900) && (bk.author = "Fahrenheit 451"))
+// console.log(userBooks)
+
+
+// const myNumber = [1,2,3,4,5,6,7,8,9]
+// const newNumber = myNumber.map((num)=> num * 10)
+// .filter((num)=>num >= 40)
+// console.log(newNumber)
+
+
+//reduce
+
+
+const array1 = [1,2,3,4,5,6];
+// const initialValue = 0;
+const sum = array1.reduce((acc,curr)=> acc + curr,0)
+console.log(sum)
+
+const shoppingCard =
+[
+
+{
+    itemName : "jsCourse",
+    price : 899
+},
+{
+    itemName : "java",
+    price : 788
+},
+{
+    itemName : "python",
+    price : 488
+},
+{
+    itemName : "DataScience",
+    price : 1000
+},
+{
+    itemName : "Data Analyst",
+    price : 899
+}
+];
+
+const TotalPrice = shoppingCard.reduce((acc, item)=>(acc + item.price),0)
+console.log(TotalPrice)
+
+
+
+
 
 
