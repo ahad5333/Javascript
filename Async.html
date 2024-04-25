@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai aur code</h1>
+    <!-- <button id="start">Start</button>
+    <button id="stop">Stop</button> -->
+    <div class="project">
+        <div id="insert">
+            <div class="key">Press the key and watch the magic</div>
+        </div>
+    </div>
+
+    <script>
+    //     const ahad = function(){
+    //         console.log("ahad")
+
+    //     }
+
+    //     const changeText = function(){
+            
+    //         document.querySelector("h1").innerHTML = "Best js series";
+
+    //     };
+
+    //    const changeMe =  setTimeout(changeText,2000);
+    //     document.querySelector("#stop").addEventListener("click",function(){
+    //         clearTimeout(changeMe)
+    //         console.log("Stopped")
+    //     })
+
+    // const sayDate = function(str){
+    //     console.log("ahd", Date.now())
+    // }
+
+
+// ----------------------------------------------
+// button which starts when clicked on start and when we click on stop button the execution stops executing 
+
+
+
+    // const started = function(){
+    //      console.log("started")
+    //     }
+    //     const changeMe = setInterval(started,1000)
+   
+    // document.querySelector("#start").addEventListener("click",function(){
+    //     setInterval(changeMe)
+    //     console.log("started")
+    // })
+    // document.querySelector("#stop").addEventListener("click",function(){
+    //     clearInterval(changeMe)
+    //     console.log("stopped")
+    // })
+
+// Generate a randomcolor
+
+
+// const randomcolor = function(){
+//     const hex = "0123456789ABCDEF"
+//     let color = "#";
+//     for(let i= 0; i<6;i++){
+//         color += hex[Math.floor(Math.random()* 16)]
+//     }
+//     return color;
+
+// };
+// let IntervalId
+// const startChangingColor = function(){
+//    if(!IntervalId){
+//     IntervalId =  setInterval(ChangeColor,1000)
+//    }
+//   function ChangeColor(){
+
+//       document.body.style.backgroundColor = randomcolor();
+// } 
+
+    
+
+// };
+// const stopChangingColor = function(){
+//     clearInterval(IntervalId)
+//     IntervalId = null;
+
+
+// }
+// document.getElementById("start").addEventListener("click",startChangingColor);
+// document.getElementById("stop").addEventListener("click",stopChangingColor);
+const insert = document.getElementById("insert");
+
+window.addEventListener("keydown",(e)=>{
+    insert.innerHTML = `
+    <div class = "color">
+    <table border = 2px>
+  <tr>
+    <th>key</th>
+    <th>keyCode</th>
+    <th>code</th>
+  </tr>
+  <tr>
+    <td>${e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+  
+</table>
+
+
+    </div>`;
+})
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
