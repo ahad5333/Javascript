@@ -861,6 +861,62 @@ document.getElementById("stop").addEventListener("click",stopChangingColor);
 </html>
 ```
 
+##project9 || Finding the key pressed with keycode and code value using js
+ ``` javascript
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai aur code</h1>
+  
+    <div class="project">
+        <div id="insert">
+            <div class="key">Press the key and watch the magic</div>
+        </div>
+    </div>
+
+    <script>
+
+const insert = document.getElementById("insert");
+
+window.addEventListener("keydown",(e)=>{
+    insert.innerHTML = `
+    <div class = "color">
+    <table border = 2px>
+  <tr>
+    <th>key</th>
+    <th>keyCode</th>
+    <th>code</th>
+  </tr>
+  <tr>
+    <td>${e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+  
+</table>
+
+
+    </div>`;
+})
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
+```
+
+
 
 
 
