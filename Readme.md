@@ -803,5 +803,66 @@ console.log(TotalPrice)
 
 ```
 
+##Project 8 || randomly changing the bg color when clicked on start bgcolor will stop changing when clicked on stop button
+
+``` javascript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai aur code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+
+const randomcolor = function(){
+    const hex = "0123456789ABCDEF"
+    let color = "#";
+    for(let i= 0; i<6;i++){
+        color += hex[Math.floor(Math.random()* 16)]
+    }
+    return color;
+
+};
+let IntervalId
+const startChangingColor = function(){
+   if(!IntervalId){
+    IntervalId =  setInterval(ChangeColor,1000)
+   }
+  function ChangeColor(){
+
+      document.body.style.backgroundColor = randomcolor();
+} 
+
+    
+
+};
+const stopChangingColor = function(){
+    clearInterval(IntervalId)
+    IntervalId = null;
+
+
+}
+document.getElementById("start").addEventListener("click",startChangingColor);
+document.getElementById("stop").addEventListener("click",stopChangingColor);
+
+
+
+
+
+    </script>
+
+</body>
+</html>
+```
+
+
+
+
 
 
