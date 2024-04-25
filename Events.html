@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in javascript</title>
+</head>
+<body>
+    
+    <h1>List of images</h1>
+    <ul id="images">
+        <li><img src="https://cdn.pixabay.com/photo/2024/04/01/05/18/green-8667981_640.jpg" alt="curry" id = "curry"></li>
+        
+        <li><img src="https://cdn.pixabay.com/photo/2017/07/24/19/57/tiger-2535888_640.jpg" alt="tiger" id = "tiger"></li>
+        <li><img src="https://cdn.pixabay.com/photo/2023/10/01/13/54/bird-8287451_640.jpg" alt="peacock" id = "peacock"></li>
+
+        <li><img src="https://cdn.pixabay.com/photo/2023/12/06/08/41/mountain-8433234_640.jpg" alt="mountain" id = "mountain"></li>
+        <li id="blueline"><a href="https://www.google.com">clickme</a></li>
+
+        
+    </ul>
+
+    <script>
+        // what we do by using eventlisteners
+        // type, timestamp, defaultPrevent
+        // target,toElement, srcElement, currentTarget
+        // clientx, clientY, screenX, screenY
+        // altkey, ctrkey, shiftkey, keycode
+
+        // if we are mentioning false they is it will work as event bubling
+        //if we are mentioning true then is it will work as event capturing
+
+        // document.getElementById("blueline").addEventListener("click", function(e){
+        //     console.log(e.preventDefault())
+        //     e.preventDefault()
+        // })
+
+        // document.getElementById("images").addEventListener("click", function(e){
+        //     // console.log(e.target.parentNode)
+        //     // let removeit = e.target.parentNode;
+        //     // removeit.remove();
+        //     console.log("clicked inside ul")
+
+        // },false)
+        // document.getElementById("mountain").addEventListener("click", function(e){
+        //     // console.log(e.target.parentNode)
+        //     // let removeit = e.target.parentNode;
+        //     // removeit.remove();
+        //     console.log("clicked on mountain")
+        //     e.stopPropagation()
+
+        // },false)
+
+        document.getElementById("images").addEventListener("click", function(e){
+            if(e.target.tagName === "IMG"){
+                console.log(e.target.tagName)
+                let removeit = e.target.parentNode;
+                removeit.remove()
+            }
+
+        },false)
+
+
+    </script>
+</body>
+</html>
