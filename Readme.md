@@ -906,15 +906,153 @@ window.addEventListener("keydown",(e)=>{
 })
 
 
-
-
-
-
     </script>
 
 </body>
 </html>
 ```
+
+##Project 10 || Upcoming countdown clock using javascript
+ ``` javascript
+
+l<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>coming soon poster</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        background-image: url(images/background.png);
+        background-position: center;
+        background-size: cover;
+        padding: 0 8%;
+      }
+      .logo {
+        width: 120px;
+        padding: 20px 0;
+        cursor: pointer;
+      }
+      .content {
+        top: 50%;
+        position: absolute;
+        transform: translateY(-50%);
+        color: white;
+      }
+      button {
+        padding: 5px 15px;
+        color: white;
+        background-color: transparent;
+        font-size: 17px;
+        outline: none;
+        border: 2px solid white;
+      }
+      .content h1 {
+        font-size: 64px;
+        font-weight: 600;
+      }
+      .container h1 span {
+        color: #ff3753;
+      }
+      .launch-time {
+        display: flex;
+      }
+      .launch-time div {
+        flex-basis: 100px;
+        margin-bottom: 40px;
+      }
+      .launch-time div p {
+        font-size: 60px;
+        margin-bottom: -14px;
+      }
+      .rocket {
+        width: 250px;
+        position: absolute;
+        right: 10%;
+        bottom: 0;
+        animation: rocket 4s linear infinite;
+      }
+      @keyframes rocket {
+        0% {
+          bottom: 0;
+          opacity: 0;
+        }
+        100% {
+          bottom: 105%;
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/logo.png" alt="" class="logo" />
+      <div class="content">
+        <p>website is Under Maintainance</p>
+        <h1>We're <span>Launching</span> Soon</h1>
+        <div class="launch-time">
+          <div>
+            <p id="days">00</p>
+            <span>Days</span>
+          </div>
+          <div>
+            <p id="hours">00</p>
+            <span>Hours</span>
+          </div>
+          <div>
+            <p id="minutes">00</p>
+            <span>Minutes</span>
+          </div>
+          <div>
+            <p id="seconds">00</p>
+            <span>Seconds</span>
+          </div>
+        </div>
+        <button>Learn More</button>
+      </div>
+
+      <img src="images/rocket.png" alt="" class="rocket" />
+    </div>
+
+    <script>
+     let countDownDate = new Date("May 10, 2024 22:00:00").getTime();
+
+      let x = setInterval(function () {
+        let now = new Date().getTime();
+        let distance = countDownDate - now;
+    
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+    
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("days").innerHTML = "00";
+          document.getElementById("hours").innerHTML = "00";
+          document.getElementById("minutes").innerHTML = "00";
+          document.getElementById("seconds").innerHTML = "00";
+        }
+      }, 1000);
+    
+    </script>
+      </body>
+</html>
+```
+
+
 
 
 
