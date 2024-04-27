@@ -930,7 +930,7 @@ l<!DOCTYPE html>
       .container {
         width: 100vw;
         height: 100vh;
-        background-image: url(images/background.png);
+        background-image: url("https://cdn.pixabay.com/photo/2020/12/02/10/30/hike-5796976_1280.jpg");
         background-position: center;
         background-size: cover;
         padding: 0 8%;
