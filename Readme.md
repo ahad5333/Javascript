@@ -912,7 +912,7 @@ window.addEventListener("keydown",(e)=>{
 </html>
 ```
 
-##Project 10 || Upcoming countdown clock using javascript
+##Project 10 || Upcoming Event Countdown Clock Using Javascript
  ``` javascript
 
 l<!DOCTYPE html>
